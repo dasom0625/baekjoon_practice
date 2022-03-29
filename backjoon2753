@@ -12,8 +12,9 @@ public class backjoon2753 {
 //		하지만, 2000년은 400의 배수이기 때문에 윤년이다.
 		
 		System.out.println("년도를 입력해주세요 : ");
-		int year = ScanUtil.nextInt();
 		
+		for(while){
+		int year = ScanUtil.nextInt();
 		
 		if(year >=1 && year <= 4000) {
 			if(year % 4 == 0 && year % 100 != 0 || year % 4 == 0 && year % 400 == 0 ) {
@@ -22,9 +23,7 @@ public class backjoon2753 {
 		}else System.out.println(year + " : 윤년이 아닙니다.");
 			
 		}System.out.println("년도를 다시 입력해주세요.");
-	
+	    }
 	
 	}
-	
-
 }
