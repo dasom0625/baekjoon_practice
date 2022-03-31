@@ -26,6 +26,10 @@ public class baekjoon2884 {
 				minute = minute;
 				time = hour+minute;
 				alarm = time - 45;
+				//alarm이음수가 되면 24시간을 다시 추가해준다는 조건
+				if(alarm<0) {
+        			alarm+=   24*60;
+       						 }
 				int Hour = alarm / 60;
 				int Minute = alarm % 60;
 				System.out.println("기상 시간 >> "+Hour+" : "+Minute);
