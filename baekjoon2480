@@ -21,12 +21,12 @@ public class baekjoon2480 {
 		random.nextInt(7); //6까지의 변수
 		int money=0;
 		
-		int Dice[] = new int[3];
+		int Dice[] = new int[3]; //주사위 3개 배열에 담기
 		for(int i = 0 ; i < Dice.length ; i++) {
 			Dice[i] = random.nextInt(7);
 		}
 
-		int dice1 = Dice[0];
+		int dice1 = Dice[0]; //각 주사위 값 배열에 저장
 		int dice2 = Dice[1];
 		int dice3 = Dice[2];
 		
