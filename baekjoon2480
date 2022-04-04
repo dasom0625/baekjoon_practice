@@ -46,15 +46,26 @@ public class baekjoon2480 {
 		}
 
 		
-		if(dice1 != dice2 && dice2 != dice3 && dice1!=dice3) {
-			
+		// 모두다르면 가장 큰 주사위 *100원
+		if (dice1 != dice2 && dice2 != dice3 && dice1 != dice3) {
+			money = dice3 * 100;
+			System.out.println(dice1 + " / " + dice2 + " / " + dice3 + " / money : " + money);
 		}
+		// 모두 같으면, 10000 + 주사위 * 1000
 		if (dice1 == dice2 && dice2 == dice3 && dice1 == dice3) {
-			money = 10000+(dice1*1000);
-		}else if (dice1 == dice2 || dice1 == dice3 ) {
-			money = 1000+dice1*100;
-		}else if (dice2 ==dice3) {
-			money = 1000+dice1*100;
+			money = 10000 + (dice1 * 1000);
+			System.out.println(dice1 + " / " + dice2 + " / " + dice3 + " / money : " + money);
+		}
+		// 같은 눈 두개 이면, 1000+같은눈 *100
+		if (dice1 == dice2 || dice1 == dice3) {
+			money = 1000 + dice1 * 100;
+			System.out.println(dice1 + " / " + dice2 + " / " + dice3 + " / money : " + money);
+		} else if (dice2 == dice3 || dice2 == dice1) {
+			money = 1000 + dice2 * 100;
+			System.out.println(dice1 + " / " + dice2 + " / " + dice3 + " / money : " + money);
+		} else if (dice3 == dice1 || dice3 == dice1) {
+			money = 1000 + dice3 * 100;
+			System.out.println(dice1 + " / " + dice2 + " / " + dice3 + " / money : " + money);
 		}
 	}
 
